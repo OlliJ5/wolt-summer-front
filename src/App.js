@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { initializeRestaurants } from './reducers/restaurantReducer'
+import { Container, Card } from 'semantic-ui-react'
 
-function App() {
+function App(props) {
+
+  useEffect(() => {
+    props.initializeRestaurants()
+  }, [])
+
+  console.log('ravintolat', props.restaurants)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <h1>Restaurant lister</h1>
+      {props.restaurants.map(restaurant =>
+        <Card
+          key={restaurant.name}
+          image={restaurant.image}
+        />
+      )}
+    </Container>
+  )
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    restaurants: state
+  }
+}
+
+export default connect(mapStateToProps, { initializeRestaurants })(App)
