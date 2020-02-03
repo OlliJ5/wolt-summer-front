@@ -21,6 +21,7 @@ npm start
 * sorttaus aakkosjärjestys []
 * filtteri nimen perusteella []
 * pikkukartta lokaatiosta []
+* pikkukuvat saman kokosiksi []
 * jos offline harmaa häivytys tai jotain []
 * blurhash []
 * testit []
