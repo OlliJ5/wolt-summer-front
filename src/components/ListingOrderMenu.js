@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Dropdown } from 'semantic-ui-react'
+import { Dropdown, Header } from 'semantic-ui-react'
 import { changeListingOrder } from '../reducers/orderReducer'
 
 const ListingOrderMenu = (props) => {
@@ -14,15 +14,20 @@ const ListingOrderMenu = (props) => {
   }
 
   return (
-    <Dropdown
-      style={{ paddingRight: '70px' }}
-      clearable
-      options={options}
-      selection
-      placeholder='Select display order'
-      onChange={selectValue}
-      fluid
-    />
+    <>
+      <Header as='h2'>
+        Select listing order
+      </Header>
+      <Dropdown
+        style={{ paddingRight: '70px' }}
+        clearable
+        options={options}
+        selection
+        placeholder='Select display order'
+        onChange={selectValue}
+        fluid
+      />
+    </>
   )
 }
 

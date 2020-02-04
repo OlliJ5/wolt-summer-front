@@ -22,8 +22,11 @@ npm start
 * filtteri nimen perusteella []
 * pikkukartta lokaatiosta []
 * pikkukuvat saman kokosiksi [x]
-* jos offline harmaa häivytys tai jotain []
-* blurhash []
+* jos offline harmaa häivytys tai jotain [x]
+* refaktoroi koodi hyvään kuntoon [x]
 * testit []
+    * aakkosjärjestys []
+    * näyttää kiinni olevat []
+
 * readme ohjeistuksella []
 

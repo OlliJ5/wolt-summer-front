@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { initializeRestaurants } from './reducers/restaurantReducer'
 import { changeListingOrder } from './reducers/orderReducer'
-import { Container, Dimmer, Loader } from 'semantic-ui-react'
+import { Container, Dimmer, Loader, Header } from 'semantic-ui-react'
 import RestaurantList from './components/RestaurantList'
 import ListingOrderMenu from './components/ListingOrderMenu'
 
@@ -14,8 +14,11 @@ const App = (props) => {
   }, [initializeListing])
 
   return (
-    <Container style={{ backgroundColor: 'lightBlue' }}>
-      <h1 style={{ paddingBottom: '10px', paddingTop: '15px', textAlign: 'center' }}>Restaurant lister</h1>
+    <Container>
+
+      <Header as='h1' textAlign='center' style={{ paddingBottom: '10px', paddingTop: '15px' }}>
+        Restaurant Lister
+      </Header>
 
       {props.restaurants.length === 0 && (
         <Dimmer active inverted>
