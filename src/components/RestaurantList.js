@@ -3,10 +3,13 @@ import { Card } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 const RestaurantList = (props) => (
-  <Card.Group style={{ paddingTop: '50px' }}>
+  <Card.Group style={{ paddingTop: '50px' }} centered>
     {props.restaurants.map(restaurant =>
       <Card key={restaurant.name}>
-        <img src={restaurant.image} height='200' alt="restaurant's food" />
+        <img className={`ui image ${restaurant.online ? '' : 'disabled'}`} src={restaurant.image} height='200' alt="restaurant's food" />
+        {!restaurant.online && (
+          <div style={{ position: 'absolute', top: 0, width: '100%', height: 'auto' }}>CLOSED</div>
+        )}
         <Card.Content>
           <Card.Header>
             {restaurant.name}

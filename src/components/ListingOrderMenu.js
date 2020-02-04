@@ -21,6 +21,7 @@ const ListingOrderMenu = (props) => {
       selection
       placeholder='Select display order'
       onChange={selectValue}
+      fluid
     />
   )
 }

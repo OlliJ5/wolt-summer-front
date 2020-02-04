@@ -14,8 +14,8 @@ const App = (props) => {
   }, [initializeListing])
 
   return (
-    <Container style={{ paddingLeft: '30px', backgroundColor: '#66c2ff' }}>
-      <h1 style={{ paddingBottom: '10px', paddingTop: '15px' }}>Restaurant lister</h1>
+    <Container style={{ backgroundColor: 'lightBlue' }}>
+      <h1 style={{ paddingBottom: '10px', paddingTop: '15px', textAlign: 'center' }}>Restaurant lister</h1>
 
       {props.restaurants.length === 0 && (
         <Dimmer active inverted>
