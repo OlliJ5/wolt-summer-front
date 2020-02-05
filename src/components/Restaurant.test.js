@@ -1,7 +1,6 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 import { render } from '@testing-library/react'
-import { prettyDOM } from '@testing-library/dom'
 import Restaurant from './Restaurant'
 
 describe('Renders restaurant info', () => {
@@ -13,8 +12,6 @@ describe('Renders restaurant info', () => {
     online: true,
     tags: ['tacos', 'tortillas']
   }
-
-  //component.debug()
 
   test('renders the restaurant name', () => {
     const component = render(
@@ -30,9 +27,7 @@ describe('Renders restaurant info', () => {
     const component = render(
       <Restaurant restaurant={openRestaurant} />
     )
-    //const desc = component.container.querySelector('description')
-    // console.log(prettyDOM(desc))
-    //component.debug()
+
     expect(component.container).toHaveTextContent(
       'tacos, tortillas'
     )
@@ -85,7 +80,6 @@ describe('Renders info for a closed restaurant', () => {
     )
 
     const text = component.container.querySelector('b')
-    console.log(prettyDOM(text))
     expect(text).toHaveTextContent('CLOSED')
   })
 

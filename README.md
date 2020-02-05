@@ -23,11 +23,15 @@ npm start
 * jos offline harmaa häivytys tai jotain [x]
 * refaktoroi koodi hyvään kuntoon [x]
 * testit []
-    * Restaurant näyttää ravintolan [x]
-    * Näyttää kiinni olevat [x]
-    * Kaikki ravintolat renderöidään []
-    * Valitsemalla dropdownista ascend ravintolat aakkosjärjestyksessä
-    * Valitsemalla dropdownista descend käänteisessä aakkosjärjestyksessä []
+    * Restaurant [x]
+        * Näyttää ravintolan tiedot [x]
+        * Näyttää kiinni olevat [x]
+    * RestaurantList [x]
+        * Kaikki ravintolat renderöidään [x]
+        * listingOrder: ascending -> aakkosjärjestys [x]
+        * listingOrder: descending -> käänteinen aakkosjärjestys [x]
+    * ListingOrderMenu []
+        * kutsuu onChange-funkkaria kun jokin arvo valitaan []
 
 * readme ohjeistuksella []
 

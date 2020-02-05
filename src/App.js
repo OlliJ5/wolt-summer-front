@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { initializeRestaurants } from './reducers/restaurantReducer'
-import { changeListingOrder } from './reducers/orderReducer'
 import { Container, Dimmer, Loader, Header } from 'semantic-ui-react'
 import RestaurantList from './components/RestaurantList'
 import ListingOrderMenu from './components/ListingOrderMenu'
@@ -43,4 +42,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { initializeRestaurants, changeListingOrder })(App)
+export default connect(mapStateToProps, { initializeRestaurants })(App)
