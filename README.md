@@ -19,14 +19,18 @@ npm start
 * tietojen haku JSON serveriltä [x]
 * kuva ravintoloista [x]
 * sorttaus aakkosjärjestys [x]
-* filtteri nimen perusteella []
-* pikkukartta lokaatiosta []
 * pikkukuvat saman kokosiksi [x]
 * jos offline harmaa häivytys tai jotain [x]
 * refaktoroi koodi hyvään kuntoon [x]
 * testit []
-    * aakkosjärjestys []
-    * näyttää kiinni olevat []
+    * Restaurant näyttää ravintolan [x]
+    * Näyttää kiinni olevat [x]
+    * Kaikki ravintolat renderöidään []
+    * Valitsemalla dropdownista ascend ravintolat aakkosjärjestyksessä
+    * Valitsemalla dropdownista descend käänteisessä aakkosjärjestyksessä []
 
 * readme ohjeistuksella []
 
+### Ekstraa
+* filtteri nimen perusteella []
+* pikkukartta ravintolan lokaatiosta []
